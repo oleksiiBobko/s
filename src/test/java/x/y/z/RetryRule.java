@@ -11,7 +11,8 @@ public class RetryRule implements TestRule {
     private static final Logger LOG = LogManager.getLogger(RetryRule.class);
     
     private int retryCount = 2;
-
+    
+    @Override
     public Statement apply(Statement base, Description description) {
         return statement(base, description);
     }
@@ -27,10 +28,10 @@ public class RetryRule implements TestRule {
                         return;
                     } catch (Throwable t) {
                         caughtThrowable = t;
-                        LOG.error(description.getDisplayName() + ": run " + (i + 1) + " failed", caughtThrowable);
+                        LOG.error(description.getDisplayName() + ": run " + (i + 1) + " failed");
                     }
                 }
-                //LOG.error(description.getDisplayName() + ": giving up after " + retryCount + " failures", caughtThrowable);
+                LOG.error(description.getDisplayName() + ": giving up after " + retryCount + " failures");
                 throw caughtThrowable;
             }
         };

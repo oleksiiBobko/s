@@ -23,7 +23,7 @@ public class TestClass1 extends BaseTest {
     @Parameters(source = TestParams.class, method = TestParams.PARAMS_METHOD_NAME)
     public void test1(Attributes game, Attributes category) {
         LOG.info("call " + game + " " + category);
-        assertTrue(true);
+        assertTrue(false);
     }
     
     @Test

@@ -12,9 +12,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(ClasspathSuite.class)
 @BaseTypeFilter({ BaseTest.class })
-public class BaseTestSuite {
+public class SystemTestSuite {
     
-    private static final Logger LOG = LogManager.getLogger(BaseTestSuite.class);
+    private static final Logger LOG = LogManager.getLogger(SystemTestSuite.class);
     
     @BeforeClass
     public static void beforeClass() {

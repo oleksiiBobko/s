@@ -7,5 +7,5 @@ import org.junit.runners.Suite.SuiteClasses;
  * Use this suite in order to run all tests from within Eclipse IDE
  * */
 @RunWith(DevelopmentRunner.class)
-@SuiteClasses({BaseTestSuite.class})
-public class DevelopmentSuite { }
+@SuiteClasses({SystemTestSuite.class})
+public class DevelopmentTestSuite { }
