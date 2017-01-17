@@ -6,7 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
         JUnitCore core = new JUnitCore();
-        core.run(BaseTestSuite.class);
+        core.run(DevelopmentSuite.class);
+        //core.run(BaseTestSuite.class);
     }
 
 }

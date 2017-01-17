@@ -22,7 +22,7 @@ public class TestClass1 extends BaseTest {
     @UnderDevelopment
     @Parameters(source = TestParams.class, method = TestParams.PARAMS_METHOD_NAME)
     public void test1(Attributes game, Attributes category) {
-        LOG.info("call" + game + " " + category);
+        LOG.info("call " + game + " " + category);
         assertTrue(true);
     }
     
@@ -31,7 +31,7 @@ public class TestClass1 extends BaseTest {
     @Ignore("because i can")
     @Parameters(source = TestParams.class, method = TestParams.PARAMS_METHOD_NAME)
     public void test11(Attributes game, Attributes category) {
-        LOG.info("call" + game + " " + category);
+        LOG.info("call " + game + " " + category);
         assertTrue(true);
     }
     
