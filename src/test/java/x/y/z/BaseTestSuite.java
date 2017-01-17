@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
 @BaseTypeFilter({ BaseTest.class })
 public class BaseTestSuite {
     
-    private static final Logger LOG =  LogManager.getLogger(BaseTestSuite.class);
+    private static final Logger LOG = LogManager.getLogger(BaseTestSuite.class);
     
     @BeforeClass
     public static void beforeClass() {
