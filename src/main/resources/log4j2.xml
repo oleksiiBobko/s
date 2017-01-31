@@ -4,10 +4,22 @@
         <Console name="CONSOLE" target="SYSTEM_OUT">
             <PatternLayout pattern="[%d{ISO8601}] [%p] %c %M:%L (%t) [%m]%n" />
         </Console>
+        <RollingFile name="ROLLING_FILE" fileName="log/z.log"
+            filePattern="log/z.log.%i">
+            <PatternLayout pattern="[%d{ISO8601}] [%p] %c %M:%L (%t) [%m]%n" />
+            <Policies>
+                <OnStartupTriggeringPolicy />
+                <SizeBasedTriggeringPolicy
+                    size="10 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="1"
+                fileIndex="min" />
+        </RollingFile>
     </Appenders>
     <Loggers>
         <Root level="INFO" includeLocation="true">
             <AppenderRef ref="CONSOLE" />
+            <AppenderRef ref="ROLLING_FILE" />
         </Root>
     </Loggers>
 </Configuration>

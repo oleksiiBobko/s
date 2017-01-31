@@ -18,6 +18,7 @@ public class TestClass1 extends BaseTest {
     
     private static final Logger LOG =  LogManager.getLogger(TestClass1.class);
     
+    @Ignore
     @Test
     @UnderDevelopment
     @Parameters(source = TestParams.class, method = TestParams.PARAMS_METHOD_NAME)
