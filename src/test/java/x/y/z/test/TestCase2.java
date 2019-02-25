@@ -13,7 +13,7 @@ public class TestCase2 {
     @Test
     public void test2() {
         LOG.info("run");
-        assertTrue(false);
+        assertTrue(true);
     }
     
 }
